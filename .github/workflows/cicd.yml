@@ -33,29 +33,9 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         dotnet build --configuration Release --output ./output
         popd
-    
-    - name: 'Azure Login'
-      inputs: 
-      creds:
-      description: 'Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS'
-      required: true
-      enable-AzPSSession: 
-      description: 'Set this value to true to enable Azure PowerShell Login in addition to Az CLI login'
-      required: false
-      default: false
-      allow-no-subscriptions:
-      description: 'Set this value to true to enable support for accessing tenants without subscriptions'
-      required: false
-      default: false
-      branding:
-      icon: 'login.svg'
-      color: 'blue'
-      runs:
-        using: 'node12'
-        main: 'lib/main.js'
         
     - name: 'Run Azure Functions Action'
-      uses: Azure/functions-action@v1.1.8
+      uses: Azure/functions-action@v1
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
