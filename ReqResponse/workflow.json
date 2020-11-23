@@ -7,7 +7,7 @@
                 "kind": "http",
                 "inputs": {
                     "statusCode": 200,
-                    "body": "Hello Kingfisher"
+                    "body": "Hello Kingfisher githubaction"
                 },
                 "runAfter": {}
             }
