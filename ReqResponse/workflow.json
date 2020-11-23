@@ -9,6 +9,28 @@
                     "statusCode": 200,
                     "body": "Hello Kingfisher githubaction"
                 },
+                "runAfter": {
+                    "Send_an_email_(V2)": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Send_an_email_(V2)": {
+                "type": "ApiConnection",
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "office365"
+                        }
+                    },
+                    "method": "post",
+                    "body": {
+                        "To": "prakash.beegala@microsoft.com",
+                        "Subject": "Test from GithubActions",
+                        "Body": "<p>Automated Github Actions</p>"
+                    },
+                    "path": "/v2/Mail"
+                },
                 "runAfter": {}
             }
         },
