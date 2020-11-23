@@ -3,10 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
-    <MSBuildWarningsAsMessages>MSB3246;$(MSBuildWarningsAsMessages)</MSBuildWarningsAsMessages>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7"/>
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.31"/>
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -18,11 +17,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Update="ReqResponse\**\*.*">
+    <None Update="reqres\**\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.0.0.8-preview"/>
+    <PackageReference Include="Microsoft.Azure.Workflows.WebJobs.Extension" Version="1.0.0.6-preview"/>
   </ItemGroup>
 </Project>
