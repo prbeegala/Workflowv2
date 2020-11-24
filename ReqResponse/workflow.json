@@ -26,8 +26,8 @@
                     "method": "post",
                     "body": {
                         "To": "prakash.beegala@microsoft.com",
-                        "Subject": "Test from GithubActions",
-                        "Body": "<p>Automated Github Actions</p>"
+                        "Subject": "Test from GithubActions modified",
+                        "Body": "<p>Automated Github Actions modified</p>"
                     },
                     "path": "/v2/Mail"
                 },
